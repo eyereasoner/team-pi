@@ -2,7 +2,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
+# We don't want street or number for any subject of type Human or its linked predicates
 :Policy2 
-    a :NestedPolicy ;
+    a :DeepNestedPolicy ;
     :selectClass :Human ;
     :privatePredicate :street , :number .

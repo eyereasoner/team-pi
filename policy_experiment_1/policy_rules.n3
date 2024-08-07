@@ -5,7 +5,7 @@
 # Policy goes one level deep
 #   If a subject of type selectClass contains one of privatePredicate predicates, then we sound the alarm
 { 
-    ?Pol a :Policy ;
+    ?Pol a :SimplePolicy ;
         :selectClass ?Class ;
         :privatePredicate ?Pred .
 
@@ -17,7 +17,7 @@
 # NestedPolicy walks the graph
 #  If a subject of class selectClass contains a privatePredicate or one of its branches contains it, then we sound the alarm
 { 
-    ?Pol a :NestedPolicy ;
+    ?Pol a :DeepNestedPolicy ;
         :selectClass ?Class ;
         :privatePredicate ?Pred .
 

@@ -4,7 +4,7 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix skolem: <https://eyereasoner.github.io/.well-known/genid/835b663c-db97-421c-ab7a-6a05e35b7e2e#>.
+@prefix skolem: <https://eyereasoner.github.io/.well-known/genid/94ebd203-798a-4ee7-b298-4f36666f0663#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 # inference fuse
