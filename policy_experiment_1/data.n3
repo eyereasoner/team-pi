@@ -8,5 +8,16 @@
 
 :AliceAddress a :Address ;
     :street :EvergreenTerrace ;
-    :number 16 ;
+    :number "16" ;
     :city :SpringField .
+
+:Bob a :Human ;
+    :name "Bob" ;
+    :employer :AcmeOrg .
+
+:AcmeOrg a :Organization ;
+    :address [
+        :street :WaterStreet ;
+        :number "1A" ;
+        :city :ShelbyVille 
+    ] .

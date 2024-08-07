@@ -1,0 +1,5 @@
+@prefix : <urn:example.org:>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+:Alice a :Human.
+:Alice :birthdate "1986-07-13"^^xsd:date.

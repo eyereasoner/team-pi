@@ -2,7 +2,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
-:Policy2 
-    a :NestedPolicy ;
-    :selectClass :Human ;
-    :privatePredicate :street , :number .
+{
+    :Bob a :Human .
+} 
+=>
+{
+    :Bob a :Human .
+} .

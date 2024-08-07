@@ -3,9 +3,9 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
 {
-    ?X a :Human .
+    :Alice a :Human .
 } 
 =>
 {
-    ?X a :Human .
+    :Alice a :Human .
 } .

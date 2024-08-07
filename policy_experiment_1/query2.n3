@@ -3,11 +3,11 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
 {
-    ?X a :Human ;
+    :Alice a :Human ;
         :birthdate ?Y .
 }
 =>
 {
-    ?X a :Human ;
+    :Alice a :Human ;
         :birthdate ?Y .
 } . 

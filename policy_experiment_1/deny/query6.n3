@@ -1,0 +1,7 @@
+@prefix : <urn:example.org:>.
+
+:Bob a :Human.
+:Bob :employer :AcmeOrg.
+:AcmeOrg :address _:bn_2.
+_:bn_2 :street :WaterStreet.
+_:bn_2 :city :ShelbyVille.

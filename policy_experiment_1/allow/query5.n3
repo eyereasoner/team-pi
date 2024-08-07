@@ -1,0 +1,3 @@
+@prefix : <urn:example.org:>.
+
+:Bob a :Human.

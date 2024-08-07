@@ -2,17 +2,41 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
+# Policy goes one level deep
+#   If a subject of type selectClass contains one of privatePredicate predicates, then we sound the alarm
 { 
     ?Pol a :Policy ;
         :selectClass ?Class ;
         :privatePredicate ?Pred .
 
     ?X a ?Class .
-    ?X ?Pred ?Y .
+    ?X ?Pred ?Whatever .
+}
+=> { ?Pol a :PolicyFailure } .
+
+# NestedPolicy walks the graph
+#  If a subject of class selectClass contains a privatePredicate or one of its branches contains it, then we sound the alarm
+{ 
+    ?Pol a :NestedPolicy ;
+        :selectClass ?Class ;
+        :privatePredicate ?Pred .
+
+    ?X a ?Class .
 } 
 => 
 {
-    ?Pol a :PolicyFailure .
+    ?X a :PolicyFocus .
+
+    { 
+      ?Something a :PolicyFocus .
+      ?Something ?Pred ?Whatever .
+    } => { ?Pol a :PolicyFailure . } .
+
+    # Search also all branches
+    { 
+       ?Something a :PolicyFocus .
+       ?Something ?P ?O .
+    } => { ?O a :PolicyFocus . } .
 } .
 
 {

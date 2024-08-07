@@ -1,0 +1,23 @@
+@prefix : <urn:example.org:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+{
+    :Bob a :Human ;
+       :employer ?E .
+   
+    ?E :address ?A .
+ 
+    ?A :street ?Street .  
+    ?A :city ?City .
+}
+=>
+{
+    :Bob a :Human ;
+       :employer ?E .
+   
+    ?E :address ?A .
+ 
+    ?A :street ?Street .  
+    ?A :city ?City .
+} . 

@@ -1,0 +1,6 @@
+@prefix : <urn:example.org:>.
+
+:Alice a :Human.
+:Alice :address :AliceAddress.
+:AliceAddress :street :EvergreenTerrace.
+:AliceAddress :city :SpringField.
