@@ -1,0 +1,10 @@
+@prefix : <urn:example.org:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+# We never want to see a socialSecurityNumber in any scope were a Human subject is available
+# no matter what
+:Policy3 
+    a :ScopePolicy ;
+    :selectClass :Human ;
+    :privatePredicate :socialSecurityNumber .

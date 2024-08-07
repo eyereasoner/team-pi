@@ -4,11 +4,11 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix skolem: <https://eyereasoner.github.io/.well-known/genid/d0431d8d-5eb3-4dd4-a991-276d8f8c87a6#>.
+@prefix skolem: <https://eyereasoner.github.io/.well-known/genid/6d00abf5-112b-4b57-b871-15cef45dc1ab#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 # inference fuse
 {
-    :Policy2 a :PolicyFailure.
+    :Policy3 a :PolicyFailure.
 } => false.
 )

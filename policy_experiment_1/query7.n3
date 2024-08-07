@@ -1,0 +1,12 @@
+@prefix : <urn:example.org:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+{
+    :Alice a :Human .
+} 
+=>
+{
+    :Alice a :Human .
+    :Hank :socialSecurityNumber "230-231139843-X921" .
+} .

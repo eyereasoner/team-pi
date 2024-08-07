@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ "$1" == "clean" ]; then
-    rm allow/*
-    rm deny/*
-fi
+rm allow/*
+rm deny/*
 
 for f in query*.n3; do
   # Pass one create a result

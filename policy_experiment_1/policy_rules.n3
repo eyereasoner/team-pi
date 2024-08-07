@@ -2,7 +2,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
-# Policy goes one level deep
+# SimplePolicy goes one level deep
 #   If a subject of type selectClass contains one of privatePredicate predicates, then we sound the alarm
 { 
     ?Pol a :SimplePolicy ;
@@ -14,7 +14,7 @@
 }
 => { ?Pol a :PolicyFailure } .
 
-# NestedPolicy walks the graph
+# DeepNestedPolicy walks the graph
 #  If a subject of class selectClass contains a privatePredicate or one of its branches contains it, then we sound the alarm
 { 
     ?Pol a :DeepNestedPolicy ;
@@ -39,7 +39,18 @@
     } => { ?O a :PolicyFocus . } .
 } .
 
+# ScopePolicy screams when in a scope just a predicate is available
+{ 
+    ?Pol a :ScopePolicy ;
+        :selectClass ?Class ;
+        :privatePredicate ?Pred .
+
+    ?X a ?Class .
+
+    ?Anything ?Pred ?Whatever .
+} 
+=> { ?Pol a :PolicyFailure } .
+
 {
     ?Pol a :PolicyFailure
 } => false .
-

@@ -1,0 +1,4 @@
+@prefix : <urn:example.org:>.
+
+:Alice a :Human.
+:Hank :socialSecurityNumber "230-231139843-X921".
