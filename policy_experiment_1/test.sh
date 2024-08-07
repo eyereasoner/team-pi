@@ -10,7 +10,7 @@ for f in query*.n3; do
   eye --nope --quiet --query $f data.n3 > .tmp 2>&1
 
   # Pass two evaluate the result
-  eye --nope --quiet --pass .tmp policy* > .tmp2 2>&1  
+  eye --nope --quiet .tmp policy* > .tmp2 2>&1  
 
   if [ $? -eq 0 ]; then
     echo "allow $f"

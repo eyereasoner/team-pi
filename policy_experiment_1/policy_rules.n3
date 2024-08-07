@@ -9,5 +9,13 @@
 
     ?X a ?Class .
     ?X ?Pred ?Y .
+} 
+=> 
+{
+    ?Pol a :PolicyFailure .
+} .
+
+{
+    ?Pol a :PolicyFailure
 } => false .
 
