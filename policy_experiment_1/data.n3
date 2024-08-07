@@ -1,0 +1,12 @@
+@prefix : <urn:example.org:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Alice a :Human ;
+    :name "Alice" ;
+    :birthdate "1986-07-13"^^xsd:date ;
+    :address :AliceAddress .
+
+:AliceAddress a :Address ;
+    :street :EvergreenTerrace ;
+    :number 16 ;
+    :city :SpringField .
