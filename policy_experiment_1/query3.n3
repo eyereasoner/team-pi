@@ -2,7 +2,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
-:Policy1 
-    a :Policy ;
-    :selectClass :Human ;
-    :privatePredicate :birthdate .
+{
+    ?X a :Human ;
+       :address ?Y .
+  
+    ?Y :city ?Z .
+}
+=>
+{
+    ?X a :Human ;
+       :address ?Y .
+  
+    ?Y :city ?Z .
+} . 
